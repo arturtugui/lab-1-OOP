@@ -3,15 +3,6 @@ package oop.lab1;
 import java.util.List;
 import java.util.Map;
 
-enum Planets {
-    Earth,
-    Asgard,
-    Betelgeuse,
-    Vogsphere,
-    Kashyyyk,
-    Endor
-}
-
 public class Filter {
     static Map<String, Universe> filter(List<Individual> individuals, Map<String, Universe> universeMap) {
         for (Individual ind : individuals) {
@@ -20,7 +11,7 @@ public class Filter {
                 switch(planet.toLowerCase()){
                     case "betelgeuse":
                     case "vogsphere":
-                        universeMap.get("hitchHiker").inhabitants.add(ind);
+                        universeMap.get("hitchhiker").inhabitants.add(ind);
                         break;
 
                     case "asgard":
@@ -33,7 +24,7 @@ public class Filter {
 
                     case "endor":
                     case "kashyyyk":
-                        universeMap.get("starWars").inhabitants.add(ind);
+                        universeMap.get("starwars").inhabitants.add(ind);
                         break;
                 }
 
@@ -42,13 +33,13 @@ public class Filter {
 
             } else if (ind.getTraits() != null) {
                 if(ind.getTraits().contains("HAIRY")){
-                    universeMap.get("starWars").inhabitants.add(ind);
+                    universeMap.get("starwars").inhabitants.add(ind);
                 }
                 else if(ind.getTraits().contains("GREEN")){
-                    universeMap.get("hitchHiker").inhabitants.add(ind);
+                    universeMap.get("hitchhiker").inhabitants.add(ind);
                 }
                 else if(ind.getTraits().contains("EXTRA_ARMS") || ind.getTraits().contains("EXTRA_HEAD")){
-                    universeMap.get("hitchHiker").inhabitants.add(ind);
+                    universeMap.get("hitchhiker").inhabitants.add(ind);
                 }
                 else if(ind.getTraits().contains("POINTY_EARS")){
                     universeMap.get("rings").inhabitants.add(ind);
@@ -62,7 +53,7 @@ public class Filter {
                             universeMap.get("rings").inhabitants.add(ind);
                         }
                         else
-                            universeMap.get("hitchHiker").inhabitants.add(ind);
+                            universeMap.get("hitchhiker").inhabitants.add(ind);
                     }
                 }
                 else{

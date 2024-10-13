@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Universe {
-    String name;
-    List<Individual> inhabitants;
+    public String name;
+    public List<Individual> inhabitants;
 
     public Universe(String name) {
         this.name = name;
