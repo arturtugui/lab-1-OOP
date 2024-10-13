@@ -4,35 +4,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Individual {
-    //attributes
-    private int id;
-    private boolean isHumanoid;
+
+    //attributes, changed the types so you can initialize as null
+    private Integer id;
+    private Boolean isHumanoid;
     private String planet;
-    private int age;
+    private Integer age;
     private List<String> traits;
 
 
     //constructor
     public Individual() {
+        id = null;
+        isHumanoid = null;
+        planet = null;
+        age = null;
         traits = new ArrayList<>();
     }
 
 
     //setters and getters
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
 
-    public boolean isHumanoid() {
+    public Boolean isHumanoid() {
         return isHumanoid;
     }
 
-    public void setHumanoid(boolean humanoid) {
+    public void setHumanoid(Boolean humanoid) {
         isHumanoid = humanoid;
     }
 
@@ -46,11 +51,11 @@ public class Individual {
     }
 
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
