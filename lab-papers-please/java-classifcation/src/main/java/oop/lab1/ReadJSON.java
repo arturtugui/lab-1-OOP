@@ -1,4 +1,4 @@
-// to make it work for input, change the pathname and data -> input
+// to make it work for input, change the pathname and data -> input (DONE)
 package oop.lab1;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -17,8 +17,8 @@ public class ReadJSON {
         ObjectMapper mapper = new ObjectMapper();
 
         try{
-            File inputFile = new File("C:/Users/Admin/Desktop/OOP/oop-course-repo/lab-papers-please/java-classifcation/src/main/resources/test-input.json");
-            JsonNode data = mapper.readTree(inputFile).get("data");
+            File inputFile = new File("C:/Users/Admin/Desktop/OOP/oop-course-repo/lab-papers-please/input.json");
+            JsonNode data = mapper.readTree(inputFile).get("input");
 
             for (JsonNode node : data) {
                 Individual individual = new Individual();
