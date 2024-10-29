@@ -91,14 +91,29 @@ public class TextData {
         return numberOfSentences;
     }
 
-    //has problems with things like D.C., etc., and Roe v. Wade
+//    //has problems with things like D.C., etc., and Roe v. Wade AND count empty sentences (whitespaces)
+//    private int countSentences() {
+//        return this.text.split("[.!?]").length;
+//        //finds each occurrence in the text of . ! ?
+//        //using [.!?] means match any of the chr inside
+//        //split() returns an array of substrings defined by the regex [.!?]
+//        //and then we count it
+//    }
+
     private int countSentences() {
-        return this.text.split("[.!?]").length;
-        //finds each occurrence in the text of . ! ?
-        //using [.!?] means match any of the chr inside
-        //split() returns an array of substrings defined by the regex [.!?]
-        //and then we count it
+        String[] sentences = this.text.split("[.!?]");
+        int count = 0;
+
+        for (int i = 0; i < sentences.length; i++) {
+            String sentence = sentences[i].trim(); //Get rid of whitespace
+            if (!sentence.isEmpty()) {
+                count++;
+            }
+        }
+
+        return count;
     }
+
 
     public String getLongestWord() {
         return longestWord;
@@ -113,5 +128,16 @@ public class TextData {
             }
         }
         return longest;
+    }
+
+    public void showTextDate(){
+        System.out.println("File Name: " + this.getFileName());
+        System.out.println("Text Content:\n" + this.getText());
+        System.out.println("Number of Vowels: " + this.getNumberOfVowels());
+        System.out.println("Number of Consonants: " + this.getNumberOfConsonants());
+        System.out.println("Number of Letters: " + this.getNumberOfLetters());
+        System.out.println("Number of Sentences: " + this.getNumberOfSentences());
+        System.out.println("Longest Word: " + this.getLongestWord());
+        System.out.println("\n");
     }
 }
