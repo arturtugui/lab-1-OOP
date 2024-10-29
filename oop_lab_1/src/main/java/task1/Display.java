@@ -57,7 +57,6 @@ public class Display {
         else {
             System.out.println("The displays \"" + this.getModel() + "\" and \"" + m.getModel() + "\" are the same size");
         }
-        System.out.print("\n");
     }
 
     public void compareSharpness(Display m){
@@ -71,12 +70,19 @@ public class Display {
         else {
             System.out.println("The displays \"" + this.getModel() + "\" and \"" + m.getModel() + "\" have the same sharpness");
         }
-        System.out.print("\n");
     }
 
     public void compareWithMonitor(Display m){
         this.compareSize(m);
         this.compareSharpness(m);
+    }
+
+    //showing
+    public void showDisplay(){
+        System.out.println("Characteristics of the display \"" + this.getModel() + "\":");
+        System.out.println("\t Size: " + this.getWidth()+ " x " + this.getHeight() + " cm");
+        System.out.println("\t Pixels per inch: " + this.getPpi());
+        System.out.println("\n");
     }
 
 }

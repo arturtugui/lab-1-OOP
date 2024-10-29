@@ -10,10 +10,12 @@ public class Main {
         m1.compareSize(m2);
         m2.compareSize(m3);
         m1.compareSize(m3);
+        System.out.println("\n");
 
         m1.compareSharpness(m2);
         m2.compareSharpness(m3);
         m1.compareSharpness(m3);
+        System.out.println("\n");
 
         m1.compareWithMonitor(m2);
         m2.compareWithMonitor(m3);
