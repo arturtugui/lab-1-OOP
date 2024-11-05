@@ -11,6 +11,8 @@ public class Coffee {
         setIntensity(intensity);
     }
 
+
+
     public String getName() {
         return name;
     }

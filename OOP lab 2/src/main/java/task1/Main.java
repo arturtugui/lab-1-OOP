@@ -9,9 +9,9 @@ public class Main {
         //Task 2 using upcasting
         Coffee c1 = new Coffee("Coffee", Intensity.LIGHT);
         Americano c2 = new Americano("Americano", Intensity.NORMAL, 100);
-        Cappuccino c3 = new Cappuccino("Cappucino", Intensity.STRONG, 50);
+        Cappuccino c3 = new Cappuccino("Cappuccino", Intensity.STRONG, 50);
         PumpkinSpiceLatte c4 = new PumpkinSpiceLatte("Pumpkin Spice Latte", Intensity.LIGHT, 30, 5);
-        SyrupCappuccino c5 = new SyrupCappuccino("Syrup Cappucino", Intensity.NORMAL, 80, SyrupType.CARAMEL);
+        SyrupCappuccino c5 = new SyrupCappuccino("Syrup Cappuccino", Intensity.NORMAL, 80, SyrupType.CARAMEL);
 
         ArrayList<Coffee> coffees = new ArrayList<Coffee>();
         coffees.add(c1);
