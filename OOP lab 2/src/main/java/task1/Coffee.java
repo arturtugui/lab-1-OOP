@@ -29,4 +29,11 @@ public class Coffee {
         System.out.println("\nCoffee name: " + getName());
         System.out.println("Coffee intensity: " + getIntensity());
     }
+
+    public Coffee makeCoffee() {
+        System.out.println("\nMaking: " + getName());
+        System.out.println("Intensity set to " + getIntensity());
+
+        return this;
+    }
 }

@@ -26,4 +26,10 @@ public class SyrupCappuccino extends Cappuccino {
         super.printDetails(); //of cappucino
         System.out.println("Syrup type: " + getSyrup() + " mg");
     }
+
+    public SyrupCappuccino makeSyrupCappuccino() {
+        super.makeCappuccino();
+        System.out.println("Adding " + getSyrup());
+        return this;
+    }
 }

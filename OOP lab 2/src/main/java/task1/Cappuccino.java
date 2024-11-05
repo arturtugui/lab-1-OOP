@@ -25,4 +25,11 @@ public class Cappuccino  extends Coffee{
         super.printDetails();
         System.out.println("Cappucino milk: " + getMlOfMilk() + " ml");
     }
+
+    public Cappuccino makeCappuccino() {
+        super.makeCoffee();
+        System.out.println("Adding " + getMlOfMilk() + " mls of milk");
+
+        return this;
+    }
 }
