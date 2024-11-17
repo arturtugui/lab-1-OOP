@@ -1,8 +1,7 @@
-package task4;
+package task4_v2_proper_typeCasting;
 
 import enums.Intensity;
 import enums.SyrupType;
-import task4_v2_proper_typeCasting.Cappuccino;
 
 public class SyrupCappuccino extends Cappuccino {
     protected SyrupType syrup;
@@ -24,17 +23,19 @@ public class SyrupCappuccino extends Cappuccino {
 
     @Override
     public void printDetails(){
-        super.printDetails(); //of cappucino
-        System.out.println("Syrup type: " + getSyrup() + " mg");
+        super.printDetails(); //of cappuccino
+        System.out.println("Syrup type: " + getSyrup());
+    }
+
+    protected static void makeSyrupCappuccinoPrint(SyrupCappuccino syrupCappuccino){
+        makeCappuccinoPrint(syrupCappuccino);
+        System.out.println("Adding " + syrupCappuccino.getSyrup());
     }
 
     public static SyrupCappuccino makeSyrupCappuccino(String name, Intensity intensity, int mlOfMilk, SyrupType syrup) {
         SyrupCappuccino syrupCappuccino = new SyrupCappuccino(name, intensity, mlOfMilk, syrup);
 
-        System.out.println("\nMaking: " + syrupCappuccino.getName());
-        System.out.println("Intensity set to " + syrupCappuccino.getIntensity());
-        System.out.println("Adding " + syrupCappuccino.getMlOfMilk() + " mls of milk");
-        System.out.println("Adding " + syrupCappuccino.getSyrup());
+        makeSyrupCappuccinoPrint(syrupCappuccino);
 
         return syrupCappuccino;
     }

@@ -1,9 +1,8 @@
 package task4;
 
 import enums.Intensity;
-import task4_failed_casting_attempt.Coffee;
 
-public class Americano extends task4_failed_casting_attempt.Coffee {
+public class Americano extends task4_v2_proper_typeCasting.Coffee {
     protected int mlOfWater;
 
     protected Americano(String name, Intensity intensity, int mlOfWater) {

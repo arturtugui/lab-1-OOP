@@ -1,4 +1,4 @@
-package task4_failed_casting_attempt;
+package task4_v2_proper_typeCasting;
 
 import enums.Intensity;
 
@@ -21,15 +21,22 @@ public class Cappuccino  extends Coffee{
 
 
     @Override
-    protected void printDetails(){
+    public void printDetails(){
         super.printDetails();
         System.out.println("Cappucino milk: " + getMlOfMilk() + " ml");
     }
 
-    protected Cappuccino makeCappuccino() {
-        //super.makeCoffee();
-        System.out.println("Adding " + getMlOfMilk() + " mls of milk");
+    protected static void makeCappuccinoPrint(Cappuccino cappuccino){
+        makeCoffeePrint(cappuccino);
+        System.out.println("Adding " + cappuccino.getMlOfMilk() + " mls of milk");
 
-        return this;
+    }
+
+    public static Cappuccino makeCappuccino(String name, Intensity intensity, int mlOfMilk) {
+        Cappuccino cappuccino = new Cappuccino(name, intensity, mlOfMilk);
+
+        makeCappuccinoPrint(cappuccino);
+
+        return cappuccino;
     }
 }

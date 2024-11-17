@@ -1,9 +1,8 @@
-package task4;
+package task4_v2_proper_typeCasting;
 
 import enums.Intensity;
-import task4_v2_proper_typeCasting.Cappuccino;
 
-public class PumpkinSpiceLatte extends Cappuccino {
+public class PumpkinSpiceLatte extends Cappuccino{
     protected int mgOfPumpkinSpice;
 
     protected PumpkinSpiceLatte(String name, Intensity intensity, int mlOfMilk, int mgOfPumpkinSpice) {
@@ -23,17 +22,19 @@ public class PumpkinSpiceLatte extends Cappuccino {
 
     @Override
     public void printDetails(){
-        super.printDetails(); //of cappucino
+        super.printDetails(); //of cappuccino
         System.out.println("Pumpkin spice: " + getMgOfPumpkinSpice() + " mg");
+    }
+
+    protected static void makePumpkinSpiceLattePrint(PumpkinSpiceLatte pumpkinSpiceLatte){
+        makeCappuccinoPrint(pumpkinSpiceLatte);
+        System.out.println("Adding " + pumpkinSpiceLatte.getMgOfPumpkinSpice() + " mg of pumpkin spice");
     }
 
     public static PumpkinSpiceLatte makePumpkinSpiceLatte(String name, Intensity intensity, int mlOfMilk, int mgOfPumpkinSpice) {
         PumpkinSpiceLatte pumpkinSpiceLatte = new PumpkinSpiceLatte(name, intensity, mlOfMilk, mgOfPumpkinSpice);
 
-        System.out.println("\nMaking: " + pumpkinSpiceLatte.getName());
-        System.out.println("Intensity set to " + pumpkinSpiceLatte.getIntensity());
-        System.out.println("Adding " + pumpkinSpiceLatte.getMlOfMilk() + " mls of milk");
-        System.out.println("Adding " + pumpkinSpiceLatte.getMgOfPumpkinSpice() + " mg of pumpkin spice");
+        makePumpkinSpiceLattePrint(pumpkinSpiceLatte);
 
         return pumpkinSpiceLatte;
     }

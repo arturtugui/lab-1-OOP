@@ -1,4 +1,4 @@
-package task4_failed_casting_attempt;
+package task4_v2_proper_typeCasting;
 
 import enums.Intensity;
 
@@ -25,16 +25,20 @@ public class Coffee {
 
 
 
-    protected void printDetails(){
+    public void printDetails(){
         System.out.println("\nCoffee name: " + getName());
         System.out.println("Coffee intensity: " + getIntensity());
     }
 
-    protected static Coffee makeCoffee(String name, Intensity intensity) {
-        Coffee coffee = new Coffee(name, intensity);
-
+    protected static void makeCoffeePrint(Coffee coffee) {
         System.out.println("\nMaking: " + coffee.getName());
         System.out.println("Intensity set to " + coffee.getIntensity());
+    }
+
+    public static Coffee makeCoffee(String name, Intensity intensity) {
+        Coffee coffee = new Coffee(name, intensity);
+
+        makeCoffeePrint(coffee);
 
         return coffee;
     }

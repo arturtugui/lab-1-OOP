@@ -1,7 +1,7 @@
 package task4;
 
 import enums.Intensity;
-import task4_failed_casting_attempt.Coffee;
+import task4_v2_proper_typeCasting.Coffee;
 
 public class Cappuccino  extends Coffee {
     protected int mlOfMilk;
