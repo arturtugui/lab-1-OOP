@@ -1,4 +1,5 @@
-import Task_1.CheckoutConveyor;
+package Task_1;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
