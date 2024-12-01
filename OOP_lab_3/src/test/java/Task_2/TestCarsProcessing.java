@@ -19,8 +19,8 @@ public class TestCarsProcessing {
         assertNotNull(car);
         assertEquals(1, car.getId());
         assertEquals("ELECTRIC", car.getType());
-        assertEquals("ROBOTS", car.getPassengers());
+        assertEquals("PEOPLE", car.getPassengers());
         assertTrue(car.isDining());
-        assertEquals(11, car.getConsumption());
+        assertEquals(30, car.getConsumption());
     }
 }
