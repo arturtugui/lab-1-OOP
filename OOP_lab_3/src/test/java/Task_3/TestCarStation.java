@@ -24,7 +24,7 @@ public class TestCarStation {
         cs.serveCars();
 
         assertEquals(2, DineableStats.getRobotsServedCount());
-        assertEquals(44, RefuelableStats.getElectricCarsServedCount());
+        assertEquals(44, RefuelableStats.getElectricCarsServedCountFuel());
     }
 
     @Test
@@ -44,6 +44,6 @@ public class TestCarStation {
         cs.serveCars();
 
         assertEquals(1, DineableStats.getPeopleServedCount());
-        assertEquals(27, RefuelableStats.getGasCarsServedCount());
+        assertEquals(27, RefuelableStats.getGasCarsServedCountFuel());
     }
 }

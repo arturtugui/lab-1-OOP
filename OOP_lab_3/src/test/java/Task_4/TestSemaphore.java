@@ -6,6 +6,7 @@ import Task_2.Refuelables.*;
 import Task_3.CarStation;
 import Task_3.CarsQueue;
 
+import Task_5.CarServingScheduler;
 import org.junit.Test;
 import java.io.File;
 import java.io.IOException;
@@ -54,11 +55,18 @@ public class TestSemaphore {
 
         assertTrue(carsQueue.isEmpty());
 
+        assertEquals(5, PassengersStats.getPeopleTotalCount());
+        assertEquals(5, PassengersStats.getRobotsTotalCount());
+
         assertEquals(4, DineableStats.getPeopleServedCount());
         assertEquals(2, DineableStats.getRobotsServedCount());
 
-        assertEquals(121, RefuelableStats.getElectricCarsServedCount());
-        assertEquals(232, RefuelableStats.getGasCarsServedCount());
+        assertEquals(4, RefuelableStats.getElectricCarsServedCount());
+        assertEquals(6, RefuelableStats.getGasCarsServedCount());
 
+        assertEquals(121, RefuelableStats.getElectricCarsServedCountFuel());
+        assertEquals(232, RefuelableStats.getGasCarsServedCountFuel());
+
+        CarServingScheduler.printStats();
     }
 }
