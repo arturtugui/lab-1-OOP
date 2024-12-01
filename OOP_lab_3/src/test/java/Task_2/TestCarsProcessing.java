@@ -9,8 +9,8 @@ import static org.junit.Assert.*;
 
 public class TestCarsProcessing {
     @Test
-    public void testReadCar() throws IOException {
-        File jsonFile = new File("C:\\Users\\Admin\\Desktop\\OOP\\OOP lab 3\\lab-1-OOP\\OOP_lab_3\\src\\test\\CarsExamples\\Car1.json");
+    public void testReadCar1() throws IOException {
+        File jsonFile = new File("C:\\Users\\Admin\\Desktop\\OOP\\OOP lab 3\\lab-1-OOP\\OOP_lab_3\\src\\test\\CarsExamples\\queue\\Car1.json");
         ReadJSON reader = new ReadJSON();
 
         // Read JSON and assert values
@@ -21,7 +21,6 @@ public class TestCarsProcessing {
         assertEquals("ELECTRIC", car.getType());
         assertEquals("ROBOTS", car.getPassengers());
         assertTrue(car.isDining());
-        assertEquals( 11, car.getConsumption());
+        assertEquals(11, car.getConsumption());
     }
-
 }

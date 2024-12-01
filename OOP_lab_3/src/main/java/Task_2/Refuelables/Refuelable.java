@@ -1,8 +1,7 @@
 package Task_2.Refuelables;
 
-public interface Refuelable {
-    static int gasCarsServedCount = 0;
-    static int electricCarsServedCount = 0;
+import Task_2.CarsProcessing.Car;
 
-    void refuel(String carId);
+public interface Refuelable {
+    void refuel(Car car);
 }

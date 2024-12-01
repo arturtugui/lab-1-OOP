@@ -15,6 +15,30 @@ public class Car {
         this.consumption = consumption;
     }
 
+    public Car(){
+
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setConsumption(int consumption) {
+        this.consumption = consumption;
+    }
+
+    public void setisDining(boolean dining) {
+        isDining = dining;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setPassengers(String passengers) {
+        this.passengers = passengers;
+    }
+
     public int getId() {
         return id;
     }

@@ -1,8 +1,7 @@
 package Task_2.Dineables;
 
-public interface Dineable {
-    static int peopleServedCount = 0;
-    static int robotsServedCount = 0;
+import Task_2.CarsProcessing.Car;
 
-    void serveDinner(String carId);
+public interface Dineable {
+    void serveDinner(Car car);
 }
